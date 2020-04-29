@@ -26,8 +26,6 @@ body {
     background: linear-gradient(90deg, rgba(162,185,188,1) 0%, rgba(178,173,127,1) 0%, rgba(135,143,153,1) 100%); 
     min-height: calc(100vh - 100px);
     margin: 50px;
-    background-position: fixed;
-    letter-spacing: -1px;
 }
 
 h1,
@@ -38,5 +36,5 @@ h5,
 h6 {
     margin: 0 0 5px 0;
     font-size: 50px;
-    border-bottom: 10px solid var(--grey);
+    border-bottom: 10px solid var(--navy);
 }
