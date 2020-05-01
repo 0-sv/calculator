@@ -7,3 +7,8 @@ buttons.forEach((button) => {
         outputDisplay.innerHTML += event.target.textContent;
     });
 });
+
+const clear = document.querySelector(".clear");
+clear.addEventListener('click', (event) => {
+    outputDisplay.innerHTML = "";
+});
