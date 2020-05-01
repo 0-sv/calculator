@@ -1,4 +1,5 @@
 const outputDisplay = document.getElementById("outputDisplay");
+let evaluation = 0;
 
 const buttons = document.querySelectorAll(".type");
 buttons.forEach((button) => {
@@ -18,7 +19,8 @@ ops.forEach((button) => {
         const evaluate = document.querySelector(".evaluate");
         evaluate.addEventListener('click', (event) => {
             const b = parseInt(outputDisplay.innerHTML);
-            outputDisplay.innerHTML = operate(op, a, b).toString(10);
+            evaluation = operate(op, a, b).toString(10);
+            outputDisplay.innerHTML = evaluation;
         });
     });
 });
