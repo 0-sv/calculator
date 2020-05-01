@@ -2,7 +2,13 @@
     display: grid;
     grid-gap: 10px;
     grid-template-columns: repeat(4, 1fr);
-    grid-template-rows: repeat(5, 1fr);
+    grid-template-areas: 
+        "output output output output"
+        "1      2       3     plus"
+        "4      5       6     min"
+        "7      8       9     mul"
+        ".      nul       .     div"
+        "clear  clear   clear clear"
 }
 
 .item {
@@ -13,17 +19,30 @@
 }
 
 .item0 {
-    grid-column: 1/-1;
+    grid-area: output;
+    grid-column: span 4;
+}
+
+.item10 {
+    grid-area: nul;
+}
+
+.item11 {
+    grid-area: plus;
+}
+
+.item12 {
+    grid-area: min;
 }
 
 .item13 {
-    grid-column: 2;
+    grid-area: mul;
 }
 
 .item14 {
-    grid-column: 4;
+    grid-area: div;
 }
 
 .item15 {
-    grid-column: 1/-1;
+    grid-area: clear;
 }
