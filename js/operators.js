@@ -18,13 +18,13 @@ const operate = (op, a, b) => {
     switch (op) {
         default:
             break;
-        case "add":
+        case "+":
             return add(a, b);
-        case "subtract":
+        case "-":
             return subtract(a, b);
-        case "multiply":
+        case "×":
             return multiply(a, b);
-        case "divide":
+        case "÷":
             return divide(a, b);
     }
 }
