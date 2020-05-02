@@ -11,7 +11,7 @@ const multiply = (a, b) => {
 };
 
 const divide = (a, b) => {
-    return a / b;
+    return b / a;
 };
 
 const operate = (op, a, b) => {
@@ -31,6 +31,7 @@ const operate = (op, a, b) => {
 
 function myEval (expr) {
     let lhs = result = 0;
+    if (isNaN(expr[expr.length-1])) expr.pop();
     while (Array.isArray(expr) && expr.length !== 0) {
         let top = expr.pop();
         if (!isNaN(parseInt(top))) {
