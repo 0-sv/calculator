@@ -12,19 +12,9 @@ buttons.forEach((button) => {
 
 const evaluate = document.querySelector(".evaluate");
 evaluate.addEventListener('click', (event) => {
-    let first = evaluation = 0;
-    while (Array.isArray(state) && state.length !== 0) {
-        let top = state.pop();
-        if (!isNaN(parseInt(top))) {
-            first = parseInt(top);
-        }
-        else {
-            let second = parseInt(state.pop());
-            evaluation = operate(top, first, second);
-        }
-    }
-    outputDisplay.innerHTML = evaluation.toString(10);
-    state.push(evaluation);
+    const answer = myEval(state);
+    outputDisplay.innerHTML = answer.toString(10);
+    state.push(answer);
 });
 
 const clear = document.querySelector(".clear");
