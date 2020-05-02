@@ -39,7 +39,8 @@ function myEval (expr) {
         }
         else {
             let rhs = parseInt(expr.pop());
-            result = operate(top, lhs, rhs);
+            result += operate(top, lhs, rhs);
+            lhs = 0;
         }
     }
     return result;
